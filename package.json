@@ -1,0 +1,26 @@
+{
+  "name": "rust-kill-p",
+  "version": "0.1.0",
+  "bin": {
+    "rust-kill-process": "./npm/run.js"
+  },
+  "files": [
+    "npm/**/*"
+  ],
+  "scripts": {
+    "postinstall": "node npm/install.js",
+    "preinstall": "node npm/uninstall.js",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "build": "tsc",
+    "dev": "yarn build && node lib/index.js"
+  },
+  "main": "index.js",
+  "repository": "https://github.com/anudeep652/rust-kill-process.git",
+  "author": "Anudeep <anudeep.22cs@kct.ac.in>",
+  "license": "MIT",
+  "dependencies": {
+    "binary-install": "^1.1.0"
+  }
+}
