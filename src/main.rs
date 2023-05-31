@@ -8,9 +8,9 @@ fn main() {
     println!("args: {:?}", args[1]);
 
     if let Some(pid) = get_pid_by_port(&args[1]) {
-        println!("PID of the process listening on port {}: {}", port, pid);
+        println!("PID of the process listening on port {}: {}", args[1], pid);
         kill_process(pid);
     } else {
-        println!("No process found listening on port {}", port);
+        println!("No process found listening on port {}", args[1]);
     }
 }
