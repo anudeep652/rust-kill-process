@@ -1,5 +1,5 @@
 [package]
-name = "rust-kill-process"
+name = "p-kill"
 version = "0.1.0"
 edition = "2021"
 
