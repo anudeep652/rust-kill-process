@@ -16,7 +16,7 @@ function getPlatform() {
 function getBinary() {
     const platform = getPlatform();
     const version = require('../package.json').version;
-    const url = `https://github.com/anudeep652/rust-kill-process/releases/download/v${ version }/rust-kill-process-${ platform }.tar.gz`;
+    const url = `https://github.com/anudeep652/rust-kill-process/releases/tag/release-${version}/rust-kill-process.tar.gz`;
     const name = 'kill-p';
     return new Binary(url, { name });
 }
