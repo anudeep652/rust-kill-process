@@ -1,6 +1,7 @@
 use std::process::Command;
 
-pub fn get_pid_by_port(port: u16) -> Option<u32> {
+pub fn get_pid_by_port(port: &str) -> Option<u32> {
+    println!("port: {}", port);
     let lsof_output = Command::new("lsof")
         .arg("-t")
         .arg("-i")
@@ -18,4 +19,12 @@ pub fn get_pid_by_port(port: u16) -> Option<u32> {
     let lines: Vec<&str> = output_str.split('\n').collect();
 
     Some(lines[0].parse::<u32>().unwrap())
+}
+
+pub fn kill_process(pid: u32) {
+    Command::new("kill")
+        .arg("-9")
+        .arg(format!("{}", pid))
+        .output()
+        .expect("Cannot kill process");
 }
