@@ -1,6 +1,7 @@
 use std::env::args;
 
-use rust_kill_process::{get_pid_by_port, kill_process};
+use p_kill::{get_pid_by_port, kill_process};
+
 fn main() {
     let port = 5173;
     let args: Vec<String> = args().collect();
