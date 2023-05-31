@@ -1,6 +1,6 @@
 {
   "name": "rust-kill-p",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "bin": {
     "rust-kill-process": "./npm/run.js"
   },
