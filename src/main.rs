@@ -6,8 +6,8 @@ fn main() {
     let args: Vec<String> = args().collect();
 
     let killer = killer {
-        port: String::from(&args[1]),
+        port: args[1].parse::<u32>().unwrap(),
     };
 
-    killer.kill_process();
+    killer.kill_process_by_port();
 }

@@ -1,11 +1,11 @@
 use std::process::Command;
 
 pub struct killer {
-    pub port: String,
+    pub port: u32,
 }
 
 impl killer {
-    pub fn kill_process(&self) {
+    pub fn kill_process_by_port(&self) {
         if let Some(pid) = get_pid_by_port(&self.port) {
             println!(
                 "PID of the process listening on port {}: {}",
@@ -18,7 +18,7 @@ impl killer {
     }
 }
 
-pub fn get_pid_by_port(port: &str) -> Option<u32> {
+pub fn get_pid_by_port(port: &u32) -> Option<u32> {
     println!("port: {}", port);
     let lsof_output = Command::new("lsof")
         .arg("-t")
