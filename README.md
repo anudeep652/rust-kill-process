@@ -35,7 +35,7 @@ cargo run -- PORT
 OR
 <br>
 <br>
-Create an executable to use it locally anywhere after cloning the repo
+Create an executable to run it locally anywhere in your local machine after cloning the repo
 
 ```sh
 cargo install --path .
