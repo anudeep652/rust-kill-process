@@ -2,12 +2,12 @@ use std::env::args;
 
 use p_kill::{get_pid_by_port, kill_process};
 
-struct killer {
+pub struct killer {
     port: String,
 }
 
 impl killer {
-    fn kill_process(&self) {
+    pub fn kill_process(&self) {
         if let Some(pid) = get_pid_by_port(&self.port) {
             println!(
                 "PID of the process listening on port {}: {}",
