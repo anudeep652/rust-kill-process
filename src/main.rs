@@ -1,24 +1,6 @@
 use std::env::args;
 
-use p_kill::{get_pid_by_port, kill_process};
-
-pub struct killer {
-    port: String,
-}
-
-impl killer {
-    pub fn kill_process(&self) {
-        if let Some(pid) = get_pid_by_port(&self.port) {
-            println!(
-                "PID of the process listening on port {}: {}",
-                self.port, pid
-            );
-            kill_process(pid);
-        } else {
-            println!("No process found listening on port {}", self.port);
-        }
-    }
-}
+use p_kill::killer;
 
 fn main() {
     let args: Vec<String> = args().collect();
