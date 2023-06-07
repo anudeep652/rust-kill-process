@@ -1,10 +1,10 @@
 use std::process::Command;
 
-pub struct killer {
+pub struct Killer {
     pub port: u32,
 }
 
-impl killer {
+impl Killer {
     pub fn kill_process_by_port(&self) {
         if let Some(pid) = get_pid_by_port(&self.port) {
             println!(

@@ -1,11 +1,11 @@
 use std::env::args;
 
-use p_kill::killer;
+use p_kill::Killer;
 
 fn main() {
     let args: Vec<String> = args().collect();
 
-    let killer = killer {
+    let killer = Killer {
         port: args[1].parse::<u32>().unwrap(),
     };
 

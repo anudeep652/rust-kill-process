@@ -1,11 +1,11 @@
 [package]
 name = "p-kill"
-version = "0.1.5"
+version = "0.2.0"
 edition = "2021"
 license = "MIT"
 description = "A simple cli tool to kill processes by port"
 homepage = "https://github.com/anudeep652/rust-kill-process"
-documentation = "https://github.com/anudeep652/rust-kill-process"
+documentation = "https://docs.rs/p-kill"
 repository = "https://github.com/anudeep652/rust-kill-process"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
